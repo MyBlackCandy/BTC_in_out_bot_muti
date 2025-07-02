@@ -1,34 +1,24 @@
-# Blockchain Income Monitor Bot
+# Blockchain Monitor Bot (BTC & ETH)
 
 ## Features
-- Monitor BTC, ETH, USDT (ERC-20, TRC-20, BEP-20), TRX, BNB addresses
-- Notify Telegram group when new incoming/outgoing transactions are detected
-- Multiple groups and addresses supported
+- ✅ Monitor BTC (via mempool.space) and ETH (via Etherscan)
+- ✅ Notify only new transactions per address
+- ✅ Distinguish Incoming (入金) vs Outgoing (出金)
+- ✅ Notify multiple Telegram groups
+- ✅ Support multiple wallet addresses
+- ✅ Runs every 30 seconds
 
-## Setup
+## Environment Variables
 
-1. Clone the repo:
-```bash
-git clone <your_repo_url>
-cd <your_repo>
-```
+- `BOT_TOKEN`: Telegram Bot Token
+- `CHAT_ID`: Comma-separated Telegram Chat IDs
+- `BTC_ADDRESSES`: Comma-separated BTC wallet addresses
+- `ETH_ADDRESSES`: Comma-separated ETH wallet addresses
+- `ETHERSCAN_API_KEY`: Etherscan API Key
 
-2. Install dependencies:
+## Usage
+
 ```bash
 pip install -r requirements.txt
-```
-
-3. Set environment variables:
-```bash
-export BOT_TOKEN=xxx
-export CHAT_ID=xxx
-export BTC_ADDRESSES=addr1,addr2,...
-export ETHERSCAN_API_KEY=xxx
-```
-
-4. Run the bot:
-```bash
 python main.py
 ```
-
-Make sure to set your addresses and keys in environment variables or use `.env` management.
